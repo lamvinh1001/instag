@@ -22,10 +22,10 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'build'
+    customCommand: 'run build'
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: 'frontend'
+    rootFolderOrFile: 'frontend/src'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
